@@ -1,0 +1,2 @@
+iaqualink>=0.4.1
+prometheus_client==0.7.1
