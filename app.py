@@ -42,6 +42,10 @@ async def login():
       for system in s.values():
         d = await system.get_devices()
         for device in d.values():
+          if not isinstance(device.state, str):
+            print("Expected string state, got {}".format(type(device.state)))
+            continue
+
           if device.state.strip() == "":
             continue
 
